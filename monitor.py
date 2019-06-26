@@ -29,7 +29,7 @@ def main():
 	
 
 def logWriter(message):
-	with open("./connections.log", "w") as outFile:
+	with open("./connections.log", "a") as outFile:
 			outFile.write(message + '\n')
 			
 main()
