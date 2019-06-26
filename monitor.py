@@ -16,7 +16,7 @@ def main():
 		time.sleep(10)
 		#Attempt to contact
 		try:
-			requests.get('8.8.8.8', timeout=1)
+			requests.get('https://www.google.com', timeout=1)
 			#If we get here, then success
 			logWriter(time.strftime('%x %X') + ": " + "Successful")
 		except requests.exceptions.Timeout:
@@ -30,6 +30,6 @@ def main():
 
 def logWriter(message):
 	with open("./connections.log", "w") as outFile:
-			outFile.write(message + \n)
+			outFile.write(message + '\n')
 			
 main()
